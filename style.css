@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: white;
+    scroll-padding-top: 50px;
+  }
+
+  /* nav bar */
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 5px;
+    /* padding: 10px; */
+}
+ul a{
+    border-bottom: 5px solid #0089b7;
+}
+ul a:hover{
+    border-bottom: 5px solid yellow;
+}
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* height: 40px; */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px 10px 20px;
+    background-color: #0089b7;
+       
+}
+nav ul{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    padding-top: 7px;
+}
+
+/* hero */
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #003d62;
+    padding: 20px ;
+    border-bottom: 5px solid #0089b7;
+}
+.herotext h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.hi{
+    font-size: 60px;
+    color: yellow;
+}
+.abhi{
+    font-size: 50px;
+}
+.herotext h2{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */ /* Adjust as needed */
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+/* projects */
+.projects{
+    background-color: #003d62;
+}
+.projects h1{
+    text-align: center;
+font-size: 60px;
+}
+.proimg{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.card img{
+  width: 300px;
+}
+.cardcontent{
+  width: 300px;
+}
+.card{
+   margin: 10px;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+  }
+  .cardcontent{
+   text-decoration: none;
+    text-align: center;
+    background-color: white;
+  }
+  .card:hover img{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+  }
+  .card:hover .cardcontent{
+    background-color: white;
+    color: black;
+    transform: translateY(0px);
+  }
+  .cardcontent {
+    padding: 2rem;
+    position: relative;
+    top: -5.6rem;
+    margin-bottom: -9rem;
+    transition: 0.5 s ease-in-out;
+    transform: translateY(105px);
+  }
+  .cardcontent h3 {
+    text-align: center;
+  }
+
+/* contact */
+.contact{
+    background-color: #08445a;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+}
+.contact h1{
+    font-size: 60px;
+    text-align: center;
+    padding: 10px;
+}
+.contact p{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.contact span{
+  padding: 10px;
+}
+
+/* footer */
+footer h4{
+  padding: 20px;
+  background-color: #031c25;
+  text-align: center;
+}
+
+/* media  */
+@media screen and (max-width:800px) {
+  .hero{
+    flex-direction: column;
+  }
+  nav{
+    align-items: center;
+  }
+  nav ul{
+    width: 150px;
+    padding-top: px;
+  }
+  nav h2{
+    font-size: 20px;
+  }
+  nav ul li{
+    font-size: 15px;
+  }
+  ul a{
+    border-bottom: 2px solid #0089b7;
+}
+  ul a:hover{
+    border-bottom: 2px solid yellow;
+}
+
+  /* hero section */
+  .hero img{
+    width:59vw;
+  }
+  .herotext span{
+    font-size: 30px;
+  }
+  .herotext h1{
+    font-size: 30px;
+  }
+  .herotext h2{
+    font-size: 35px;
+  }
+
+  /* project */
+  .projects h1{
+    font-size: 40px;
+    padding: 20px;
+  }
+
+
+  /* .contact */
+  .contact h1{
+    font-size: 40px;
+  }
+  .contact span{
+    font-size: 20px;
+    padding: 5px;
+  }
+
+}
